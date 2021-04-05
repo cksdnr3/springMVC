@@ -1,0 +1,40 @@
+package cu.ct.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import lombok.extern.java.Log;
+
+@Log
+@Controller
+@RequestMapping("/test")
+public class TestController {
+	
+	@RequestMapping("")
+	public void m01() {
+		log.info("m01()!");
+	}
+	
+	@RequestMapping("/base1")
+	public void m02() {
+		log.info("m02()! - Get, Post, Put, Delete");
+	}
+	
+	@RequestMapping(value="/base2", method=RequestMethod.GET)
+	public void m03() {
+		log.info("m03()! - Get");
+	}
+	
+	@RequestMapping(value="/base3", method= {RequestMethod.GET, RequestMethod.POST})
+	public void m04() {
+		log.info("m04()! - Get, Post");
+	}
+	
+	@RequestMapping(value="/form", method= RequestMethod.GET)
+	public String m05() {
+		log.info("m05()! - Get");
+		
+		return "sample/form";
+	}
+}

@@ -1,0 +1,22 @@
+package cu.ct.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.extern.java.Log;
+
+@Log
+@Controller
+@RequestMapping("/test")
+public class TestController {
+	
+	@RequestMapping("/")
+	public void m01() {
+		log.info("");
+	}
+	
+	@RequestMapping("/base1")
+	public void m02() {
+		
+	}
+}
