@@ -1,0 +1,5 @@
+package cu.ct.domain;
+
+public class Human {
+
+}
