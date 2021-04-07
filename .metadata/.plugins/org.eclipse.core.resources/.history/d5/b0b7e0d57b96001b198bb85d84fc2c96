@@ -1,6 +1,0 @@
-package cu.ct.domain;
-
-public class Human {
-	private String name;
-	private int age;
-}
