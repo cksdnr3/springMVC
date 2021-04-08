@@ -31,5 +31,10 @@
 	
 	<a href="test/json1">json1</a>
 	<a href="test/json2">json2</a>
+	
+	<h1> Sp02 Index</h1>
+	<p>
+		<a href="address/list.do">주소록</a>
+	</p>
 </body>
 </html>

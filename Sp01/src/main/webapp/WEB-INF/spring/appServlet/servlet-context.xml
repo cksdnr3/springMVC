@@ -21,9 +21,5 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="cu.ct.controller" />
-	
-	
-	
 </beans:beans>
 <!-- 컨트롤러 객체 핸들링 -->

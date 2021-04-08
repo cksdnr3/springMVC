@@ -28,6 +28,8 @@
 			value="classpath:/mybatis-config.xml" />
 	</bean>
 	
+	<context:component-scan base-package="cu.md.dao" />
+	<context:component-scan base-package="cu.md.service" />
 	<context:component-scan base-package="cu.md.mapper" />
 	<mybatis-spring:scan base-package="cu.md.mapper"/>
 
