@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   <typeAliases>
+   	   <typeAlias alias="Address" type="cu.md.domain.Address"/>
+   	   <typeAlias alias="Board" type="cu.board.domain.Board"/>
+   </typeAliases>
+   <mappers>
+   	   <mapper resource="cu/md/mapper/AddressMapper.xml"/>
+   	   <mapper resource="cu/board/mapper/BoardMapper.xml"/>
+   </mappers>
+</configuration>

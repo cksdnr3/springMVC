@@ -1,6 +1,7 @@
 package cu.md.dao;
 
 import java.sql.Connection;
+
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -17,6 +19,7 @@ import cu.md.domain.Address;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
+@Repository
 public class AddressDaoImpl implements AddressDao {
 	
 	@Autowired

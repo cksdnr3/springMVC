@@ -36,5 +36,10 @@
 	<p>
 		<a href="address/list.do">주소록</a>
 	</p>
+	
+	<h1> Board </h1>
+	<p>
+		<a href="board/list.do">list</a>
+	</p>
 </body>
 </html>
