@@ -33,6 +33,7 @@
 	<context:component-scan base-package="cu.md.mapper" />
 	<context:component-scan base-package="cu.board.mapper" />
 	<context:component-scan base-package="cu.board.service" />
+	
 	<mybatis-spring:scan base-package="cu.md.mapper"/>
 	<mybatis-spring:scan base-package="cu.board.mapper"/>
 

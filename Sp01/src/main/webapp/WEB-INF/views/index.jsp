@@ -41,5 +41,13 @@
 	<p>
 		<a href="board/list.do">list</a>
 	</p>
+	
+	<h1> File </h1>
+	<p>
+		<a href="file/list.do">File</a>
+	</p>
+	<p>
+		<a href="file/form_mt.do">File Multiple</a>
+	</p>
 </body>
 </html>

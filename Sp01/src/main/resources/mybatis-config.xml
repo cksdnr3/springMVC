@@ -5,10 +5,12 @@
 <configuration>
    <typeAliases>
    	   <typeAlias alias="Address" type="cu.md.domain.Address"/>
+   	   <typeAlias alias="Files" type="cu.md.domain.Files"/>
    	   <typeAlias alias="Board" type="cu.board.domain.Board"/>
    </typeAliases>
    <mappers>
    	   <mapper resource="cu/md/mapper/AddressMapper.xml"/>
+   	   <mapper resource="cu/md/mapper/FilesMapper.xml"/>
    	   <mapper resource="cu/board/mapper/BoardMapper.xml"/>
    </mappers>
 </configuration>

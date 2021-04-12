@@ -12,4 +12,7 @@
 	<delete id="delete" parameterType="long">
 		delete from ADDRESS where SEQ=#{seq}
 	</delete>
+	<select id="detail" resultType="Address" parameterType="long">
+		SELECT * FROM address WHERE seq=#{seq}
+	</select>
 </mapper>

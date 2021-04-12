@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cu.md.mapper.FilesMapper">
+	<select id="list" resultType="Files">
+		SELECT * FROM address_file ORDER BY seq DESC
+	</select>
+	<insert id="insert" parameterType="Files">
+		INSERT INTO address_file(ofname, sfname, fsize) values(#{ofname}, #{sfname}, #{fsize})
+	</insert>
+	<delete id="delete" parameterType="long">
+		DELETE FROM address_file WHERE seq=#{seq}
+	</delete>
+	<update id="update" parameterType="Files">
+		UPDATE address_file SET fname=#{fname}, ofname=#{ofname}, fsize=#{fsize} WHERE seq=#{seq}
+	</update>
+	<select id="detail" resultType="Files" parameterType="long">
+		SELECT * FROM address_file WHERE seq=#{seq}
+	</select>
+</mapper>
