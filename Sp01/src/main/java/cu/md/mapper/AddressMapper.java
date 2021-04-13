@@ -9,7 +9,7 @@ import cu.md.domain.Address;
 @Repository
 public interface AddressMapper {
 	public List<Address> list();
-	public void insert(Address address);
+	public long insert(Address address);
 	public void delete(long seq);
 	public Address detail(long seq);
 }

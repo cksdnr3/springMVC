@@ -7,7 +7,7 @@
 		SELECT * FROM address_file ORDER BY seq DESC
 	</select>
 	<insert id="insert" parameterType="Files">
-		INSERT INTO address_file(ofname, sfname, fsize) values(#{ofname}, #{sfname}, #{fsize})
+		INSERT INTO address_file(ofname, sfname, fsize, seq) values(#{ofname}, #{sfname}, #{fsize}, #{seq})
 	</insert>
 	<delete id="delete" parameterType="long">
 		DELETE FROM address_file WHERE seq=#{seq}

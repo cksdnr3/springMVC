@@ -6,7 +6,7 @@
 	<select id="list" resultType="Address">
 		select * from ADDRESS order by SEQ desc
 	</select>
-	<insert id="insert" parameterType="Address">
+	<insert id="insert" parameterType="Address" useGeneratedKeys="true" keyProperty="seq">
 		insert into ADDRESS(name, addr, rdate) values(#{name}, #{addr}, now())
 	</insert>
 	<delete id="delete" parameterType="long">

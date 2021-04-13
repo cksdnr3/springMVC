@@ -1,7 +1,9 @@
 package cu.md.controller;
 
 
+import java.sql.SQLException;
 import java.util.ArrayList;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +15,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.java.Log;
-import lombok.extern.log4j.Log4j;
 import cu.md.domain.Address;
+import cu.md.domain.Files;
 import cu.md.service.AddressService;
 
 @Log
@@ -40,7 +42,17 @@ public class AddressController {
 	@PostMapping("write.do")
 	public String write(Address address, @RequestParam ArrayList<MultipartFile> files) {
 
-		addressService.insertS(address, files);
+		try {
+			log.info("before write");
+			ArrayList<Files> list = addressService.insertS(address, files);
+			log.info("after write");
+			for (Files file : list) {
+				log.info(file.getSfname());
+			}
+		} catch(Exception e) {
+			log.info("#controller exception" + e);
+		}
+		
 		return "redirect:list.do";
 	}
 	@GetMapping("del.do")
